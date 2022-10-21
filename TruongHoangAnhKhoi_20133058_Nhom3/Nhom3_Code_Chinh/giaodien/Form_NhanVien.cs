@@ -47,11 +47,11 @@ namespace giaodien
         }
         private void FillComboxNhom(DataTable nhom)
         {
-            cb_nhom.DataSource = null;
-            cb_nhom.Items.Clear();
-            cb_nhom.DataSource = nhom;
-            cb_nhom.DisplayMember = "MaNhom";
-            cb_nhom.ValueMember = "MaNhom";
+            //cb_nhom.DataSource = null;
+            //cb_nhom.Items.Clear();
+            //cb_nhom.DataSource = nhom;
+            //cb_nhom.DisplayMember = "MaNhom";
+            //cb_nhom.ValueMember = "MaNhom";
         }
         private void label3_Click(object sender, EventArgs e)
         {
