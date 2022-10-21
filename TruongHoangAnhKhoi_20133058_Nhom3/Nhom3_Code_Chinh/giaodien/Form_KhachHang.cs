@@ -42,7 +42,7 @@ namespace giaodien
         }
         private void FillDataIntoGrid(DataTable list)
         {
-            data_KHang.Rows.Clear();
+            /*data_KHang.Rows.Clear();
             for (int i = 0; i < list.Rows.Count; i++)
             {
                 int index = data_KHang.Rows.Add();
@@ -50,12 +50,12 @@ namespace giaodien
                 data_KHang.Rows[i].Cells[1].Value = list.Rows[i][1].ToString();
                 data_KHang.Rows[i].Cells[2].Value = list.Rows[i][2].ToString();
                 data_KHang.Rows[i].Cells[3].Value = list.Rows[i][3].ToString();
-            }
+            }*/
         }
 
         private void btn_themKH_Click(object sender, EventArgs e)
         {
-            DataBase db = new DataBase();
+            /*DataBase db = new DataBase();
             GarageDB gr = new GarageDB();
             string makh = txt_makh.Text;
             string tenkh = txt_tenkh.Text;
@@ -76,12 +76,12 @@ namespace giaodien
                 }
             }
             DataTable KHang = gr.LayBang(gr.KH);
-            FillDataIntoGrid(KHang);
+            FillDataIntoGrid(KHang);*/
         }
 
         private void btn_suaKH_Click(object sender, EventArgs e)
         {
-            DataBase db = new DataBase();
+            /*DataBase db = new DataBase();
             GarageDB gr = new GarageDB();
             string makh = txt_makh.Text;
             string tenkh = txt_tenkh.Text;
@@ -102,12 +102,12 @@ namespace giaodien
                 }
             }
             DataTable KHang = gr.LayBang(gr.KH);
-            FillDataIntoGrid(KHang);
+            FillDataIntoGrid(KHang);*/
         }
 
         private void btn_xoaKH_Click(object sender, EventArgs e)
         {
-            DataBase db = new DataBase();
+            /*DataBase db = new DataBase();
             GarageDB gr = new GarageDB();
             string makh = txt_makh.Text;
             string query1 = "MaKH='" + makh + "'";
@@ -134,12 +134,12 @@ namespace giaodien
                 }
             }
             DataTable KHang = gr.LayBang(gr.KH);
-            FillDataIntoGrid(KHang);
+            FillDataIntoGrid(KHang);*/
         }
 
         private void data_KHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            /*try
             {
                     DataGridViewRow row = new DataGridViewRow();
                     row = data_KHang.Rows[e.RowIndex];
@@ -154,12 +154,12 @@ namespace giaodien
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void txt_sdt_Leave(object sender, EventArgs e)
         {
-            bool a = true;
+            /*bool a = true;
             GarageDB gr = new GarageDB();
             string sdt = txt_sdt.Text;
             foreach (int i in sdt)
@@ -179,7 +179,7 @@ namespace giaodien
             {
                 MessageBox.Show("Số điện thoại phải 10 số", "Thông báo", MessageBoxButtons.OK);
                 txt_sdt.Text = "";
-            }    
+            }*/    
         }
     }
 }

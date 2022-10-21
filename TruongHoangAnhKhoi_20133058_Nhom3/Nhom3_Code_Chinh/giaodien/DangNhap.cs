@@ -13,8 +13,6 @@ namespace giaodien
 {
     public partial class Form1 : Form
     {
-        public string ten = "";
-        public string chucvu = "";
         public Form1()
         {
             InitializeComponent();
@@ -55,30 +53,20 @@ namespace giaodien
         private void button2_Click(object sender, EventArgs e)
         {
             DataBase db = new DataBase();
-            string acc = txt_nameacc.Text;
-            string a = "select acc,pass from DANGNHAP where acc='" + acc + "'";
-            DataTable b = db.Execute(a);
-            if (b.Rows.Count == 0)
-                MessageBox.Show("Không có tên đăng nhập này", "Thông báo", MessageBoxButtons.OK);
-            else
+            string query = "SELECT dbo.XACMINH_USERS('"+txt_nameacc.Text+"','"+txt_pass.Text+"')";
+            DataTable b = db.Execute(query);
+            int result = int.Parse(b.Rows[0][0].ToString());
+            if (result == 0)
             {
-                string query = "select * from DANGNHAP where acc='" + txt_nameacc.Text + "' and pass='" + txt_pass.Text + "'";
-                DataTable tb = db.Execute(query);
-                if (tb.Rows.Count==0)
-                    MessageBox.Show("Mật khẩu sai", "Thông báo", MessageBoxButtons.OK);
-                else
-                {
-                    this.Hide();
-                    Form_Chinh form3 = new Form_Chinh();
-                    string query3 = " acc='" + txt_nameacc.Text + "'";
-                    GarageDB gr = new GarageDB();
-                    DataTable tb1 = gr.LayBangDK(query3, gr.DN);
-                    this.ten = tb1.Rows[0][2].ToString();
-                    this.chucvu= tb1.Rows[0][3].ToString();
-                    form3.ShowDialog();
-                    this.Close();
-                }
+                this.Hide();
+                Form_Chinh form3 = new Form_Chinh();
+                form3.ShowDialog();
+                this.Close();
             }
+            else if (result == 1)
+                MessageBox.Show("Mật khẩu sai", "Thông báo", MessageBoxButtons.OK);
+            else
+                MessageBox.Show("Không có tên đăng nhập này", "Thông báo", MessageBoxButtons.OK);
         }
 
         private void txt_pass_TextChanged(object sender, EventArgs e)

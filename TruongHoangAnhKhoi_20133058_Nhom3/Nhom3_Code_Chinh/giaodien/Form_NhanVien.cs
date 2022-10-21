@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace giaodien
 {
     public partial class Form_NhanVien : Form
     {
+        DataBase db = new DataBase();
         public Form_NhanVien()
         {
             InitializeComponent();
@@ -21,11 +23,9 @@ namespace giaodien
         {
             try
             {
-                GarageDB db = new GarageDB();
-                DataTable nhom = db.LayBang(db.NHOM);
-                DataTable tho = db.LayBang(db.THO);
-                FillComboxNhom(nhom);
-                FillDataIntoGrid(tho);
+                string query = "SELECT * FROM  XUAT_NV()";
+                DataTable table_nv = db.Execute(query);
+                data_nv.DataSource = table_nv;
             }
             catch (Exception ex)
             {
@@ -92,7 +92,8 @@ namespace giaodien
         {
             DataBase db = new DataBase();
             GarageDB gr = new GarageDB();
-            string ms = txt_matho.Text;
+            SqlCommand cmd=new SqlCommand("EXECUTE THEM_NV @nguoiid,@hoten,@diachi,@dienthoai,@ngaysinh,@cccd,@gioitinnh,@macv,@luong,@result")
+            /*string ms = txt_matho.Text;
             string ten = txt_tentho.Text;
             string luong = txt_luong.Text;
             string nhom = cb_nhom.Text;
@@ -135,7 +136,7 @@ namespace giaodien
             DataTable nhom1 = gr.LayBang(gr.NHOM);
             DataTable tho = gr.LayBang(gr.THO);
             FillComboxNhom(nhom1);
-            FillDataIntoGrid(tho);
+            FillDataIntoGrid(tho);*/
         }
         private string LayNhomTruong(string maNhom)
         {
@@ -155,7 +156,7 @@ namespace giaodien
 
         private void btn_suanv_Click(object sender, EventArgs e)
         {
-            DataBase db = new DataBase();
+            /*DataBase db = new DataBase();
             GarageDB gr = new GarageDB();
             string ms = txt_matho.Text;
             string ten = txt_tentho.Text;
@@ -250,14 +251,14 @@ namespace giaodien
              DataTable nhom1 = gr.LayBang(gr.NHOM);
             DataTable tho = gr.LayBang(gr.THO);
             FillComboxNhom(nhom1);
-            FillDataIntoGrid(tho);
+            FillDataIntoGrid(tho);*/
         }
 
         private void btn_xoanv_Click(object sender, EventArgs e)
         {
             DataBase db = new DataBase();
             GarageDB gr = new GarageDB();
-            string ms = txt_matho.Text;
+            /*string ms = txt_matho.Text;
             if (ms == "")
                 MessageBox.Show("Hãy nhập mã thợ", "Thông báo", MessageBoxButtons.OK);
             else
@@ -302,12 +303,12 @@ namespace giaodien
             DataTable nhom1 = gr.LayBang(gr.NHOM);
             DataTable tho = gr.LayBang(gr.THO);
             FillComboxNhom(nhom1);
-            FillDataIntoGrid(tho);
+            FillDataIntoGrid(tho);*/
         }
 
         private void data_nv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            /*try
             {
                 if (data_nv.Rows.Count != 1)
                 {
@@ -329,12 +330,12 @@ namespace giaodien
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
 
         private void txt_luong_Leave(object sender, EventArgs e)
         {
-            bool a = true;
+            /*bool a = true;
             GarageDB gr = new GarageDB();
             string luong = txt_luong.Text;
             foreach (int i in luong)
@@ -349,7 +350,7 @@ namespace giaodien
             {
                 MessageBox.Show("Mục này không được có chữ", "Thông báo", MessageBoxButtons.OK);
                 txt_luong.Text = "";
-            }
+            }*/
         }
     }
 }
