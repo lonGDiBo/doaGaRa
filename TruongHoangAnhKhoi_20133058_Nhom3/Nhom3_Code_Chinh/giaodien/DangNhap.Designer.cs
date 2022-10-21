@@ -81,7 +81,7 @@
             this.label4.Location = new System.Drawing.Point(294, 293);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 16);
-            this.label4.TabIndex = 10;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Forgot password?";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
@@ -95,7 +95,7 @@
             this.check_show.Location = new System.Drawing.Point(138, 292);
             this.check_show.Name = "check_show";
             this.check_show.Size = new System.Drawing.Size(121, 20);
-            this.check_show.TabIndex = 11;
+            this.check_show.TabIndex = 3;
             this.check_show.Text = "Show password";
             this.check_show.UseVisualStyleBackColor = false;
             this.check_show.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -124,7 +124,7 @@
             this.button2.Location = new System.Drawing.Point(235, 334);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
+            this.button2.TabIndex = 5;
             this.button2.Text = "LOGIN";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -141,7 +141,7 @@
             this.button1.Location = new System.Drawing.Point(297, 380);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 28);
-            this.button1.TabIndex = 13;
+            this.button1.TabIndex = 6;
             this.button1.Text = "Click Here";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -166,7 +166,7 @@
             this.txt_nameacc.Location = new System.Drawing.Point(138, 207);
             this.txt_nameacc.Name = "txt_nameacc";
             this.txt_nameacc.Size = new System.Drawing.Size(267, 25);
-            this.txt_nameacc.TabIndex = 4;
+            this.txt_nameacc.TabIndex = 1;
             // 
             // txt_pass
             // 
@@ -178,7 +178,7 @@
             this.txt_pass.Location = new System.Drawing.Point(138, 261);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(267, 25);
-            this.txt_pass.TabIndex = 15;
+            this.txt_pass.TabIndex = 2;
             // 
             // label5
             // 
