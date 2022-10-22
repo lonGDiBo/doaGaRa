@@ -92,7 +92,40 @@ namespace giaodien
         {
             DataBase db = new DataBase();
             GarageDB gr = new GarageDB();
-            SqlCommand cmd=new SqlCommand("EXECUTE THEM_NV @nguoiid,@hoten,@diachi,@dienthoai,@ngaysinh,@cccd,@gioitinnh,@macv,@luong,@result")
+            int gTinh = 0;
+            if (rdn_nu.Checked == false)
+                gTinh = 1;
+            SqlCommand cmd = new SqlCommand("DECLARE @result int EXECUTE THEM_NV '@nguoiid','@hoten','@diachi','@dienthoai',@ngaysinh,'@cccd',@gioitinnh,'@macv',@luong,@result output SELECT @result");
+            SqlParameter maNVParam = new SqlParameter("@nguoiid",txt_macv.Text);
+            SqlParameter hoTenParam = new SqlParameter("@hoten", txt_tennv.Text);
+            SqlParameter diaChiParam = new SqlParameter("@diachi", txt_dchinv.Text);
+            SqlParameter sdtParam = new SqlParameter("@dienthoai", txt_sdtnv.Text);
+            SqlParameter ngaySinhParam = new SqlParameter("@ngaysinh", date_ngaysinh.Text);
+            SqlParameter cccdParam = new SqlParameter("@cccd", txt_cccdnv.Text);
+            SqlParameter gTinhParam = new SqlParameter("@gioitinnh", gTinh.ToString());
+            SqlParameter maChucVuParam = new SqlParameter("@macv", txt_macv.Text);
+            SqlParameter luongParam = new SqlParameter("@luong", txt_luong.Text);
+            cmd.Parameters.Add(luongParam);
+            cmd.Parameters.Add(maChucVuParam);
+            cmd.Parameters.Add(maNVParam);
+            cmd.Parameters.Add(hoTenParam);
+            cmd.Parameters.Add(diaChiParam);
+            cmd.Parameters.Add(sdtParam);
+            cmd.Parameters.Add(ngaySinhParam);
+            cmd.Parameters.Add(cccdParam);
+            cmd.Parameters.Add(gTinhParam);
+            // int result = int.Parse(db.ExecuteCMD(cmd).Rows[0][0].ToString());
+            string query= "DECLARE @result as int EXECUTE THEM_NV '" + txt_manv.Text+"','"+txt_tennv.Text+"','"+txt_dchinv.Text+"','"+txt_sdtnv.Text+"','"+date_ngaysinh.Text+"','"
+                                                +txt_cccdnv.Text+"',"+gTinh.ToString()+",'"+txt_macv.Text+"',"+txt_luong.Text+",@result output SELECT @result";
+            db.Execute(query);
+            DataTable d = db.Execute(query);
+            int result = int.Parse(db.Execute(query).Rows[0][0].ToString());
+            if (result==0)
+                MessageBox.Show("Thêm không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
+            txt_manv.Text = result.ToString();
+            Form_NhanVien_Load(sender,e);
             /*string ms = txt_matho.Text;
             string ten = txt_tentho.Text;
             string luong = txt_luong.Text;

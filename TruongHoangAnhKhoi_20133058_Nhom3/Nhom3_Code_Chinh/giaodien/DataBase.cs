@@ -25,6 +25,14 @@ namespace giaodien
             sqlConn = new SqlConnection(strCnn);
 
         }
+        public DataTable ExecuteCMD(SqlCommand cmd)
+        {
+            sqlConn.Open();
+            cmd.Connection = sqlConn;
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            return dt;
+        }
         public DataTable Execute(string sqlStr)
         {
             da = new SqlDataAdapter(sqlStr, sqlConn);
