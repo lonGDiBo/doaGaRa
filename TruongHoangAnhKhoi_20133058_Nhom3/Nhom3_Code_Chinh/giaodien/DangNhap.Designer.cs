@@ -42,8 +42,8 @@
             this.txt_nameacc = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbn_thungan = new System.Windows.Forms.RadioButton();
+            this.rbn_quanly = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label2
@@ -96,7 +96,7 @@
             this.check_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check_show.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.check_show.Location = new System.Drawing.Point(184, 359);
-            this.check_show.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.check_show.Margin = new System.Windows.Forms.Padding(4);
             this.check_show.Name = "check_show";
             this.check_show.Size = new System.Drawing.Size(149, 24);
             this.check_show.TabIndex = 11;
@@ -127,7 +127,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(313, 411);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 14;
@@ -145,7 +145,7 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(168)))), ((int)(((byte)(55)))));
             this.button1.Location = new System.Drawing.Point(396, 468);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 34);
             this.button1.TabIndex = 13;
@@ -171,7 +171,7 @@
             this.txt_nameacc.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.txt_nameacc.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_nameacc.Location = new System.Drawing.Point(184, 255);
-            this.txt_nameacc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nameacc.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nameacc.Name = "txt_nameacc";
             this.txt_nameacc.Size = new System.Drawing.Size(355, 30);
             this.txt_nameacc.TabIndex = 4;
@@ -184,7 +184,7 @@
             this.txt_pass.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.txt_pass.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_pass.Location = new System.Drawing.Point(184, 321);
-            this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(355, 30);
             this.txt_pass.TabIndex = 15;
@@ -203,40 +203,40 @@
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // radioButton1
+            // rbn_thungan
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioButton1.Location = new System.Drawing.Point(251, 214);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(103, 24);
-            this.radioButton1.TabIndex = 19;
-            this.radioButton1.Text = "Thu ngân";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rbn_thungan.AutoSize = true;
+            this.rbn_thungan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.rbn_thungan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbn_thungan.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbn_thungan.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbn_thungan.Location = new System.Drawing.Point(251, 214);
+            this.rbn_thungan.Margin = new System.Windows.Forms.Padding(4);
+            this.rbn_thungan.Name = "rbn_thungan";
+            this.rbn_thungan.Size = new System.Drawing.Size(103, 24);
+            this.rbn_thungan.TabIndex = 19;
+            this.rbn_thungan.Text = "Thu ngân";
+            this.rbn_thungan.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rbn_quanly
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.radioButton2.Checked = true;
-            this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radioButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.radioButton2.FlatAppearance.BorderSize = 2;
-            this.radioButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.radioButton2.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.radioButton2.Location = new System.Drawing.Point(373, 213);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 24);
-            this.radioButton2.TabIndex = 20;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Quản lý";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rbn_quanly.AutoSize = true;
+            this.rbn_quanly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.rbn_quanly.Checked = true;
+            this.rbn_quanly.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbn_quanly.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.rbn_quanly.FlatAppearance.BorderSize = 2;
+            this.rbn_quanly.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.rbn_quanly.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbn_quanly.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.rbn_quanly.Location = new System.Drawing.Point(373, 213);
+            this.rbn_quanly.Margin = new System.Windows.Forms.Padding(4);
+            this.rbn_quanly.Name = "rbn_quanly";
+            this.rbn_quanly.Size = new System.Drawing.Size(89, 24);
+            this.rbn_quanly.TabIndex = 20;
+            this.rbn_quanly.TabStop = true;
+            this.rbn_quanly.Text = "Quản lý";
+            this.rbn_quanly.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -245,8 +245,8 @@
             this.BackgroundImage = global::giaodien.Properties.Resources.Picture11;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(603, 538);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbn_quanly);
+            this.Controls.Add(this.rbn_thungan);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.button2);
@@ -260,7 +260,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -283,8 +283,8 @@
         private System.Windows.Forms.TextBox txt_nameacc;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbn_quanly;
+        private System.Windows.Forms.RadioButton rbn_thungan;
     }
 }
 

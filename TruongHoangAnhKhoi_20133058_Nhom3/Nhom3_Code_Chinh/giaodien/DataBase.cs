@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using System.Data.Common;
 
 namespace giaodien
 {
@@ -25,13 +26,12 @@ namespace giaodien
             sqlConn = new SqlConnection(strCnn);
 
         }
-        public DataTable ExecuteCMD(SqlCommand cmd)
+        public void ExecuteCMD(SqlCommand cmd)
         {
             sqlConn.Open();
             cmd.Connection = sqlConn;
-            DataTable dt = new DataTable();
-            dt.Load(cmd.ExecuteReader());
-            return dt;
+            cmd.ExecuteNonQuery();
+            sqlConn.Close();
         }
         public DataTable Execute(string sqlStr)
         {

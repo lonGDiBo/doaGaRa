@@ -13,6 +13,7 @@ namespace giaodien
 {
     public partial class Form1 : Form
     {
+        public string chucVuUser;
         public Form1()
         {
             InitializeComponent();
@@ -58,6 +59,10 @@ namespace giaodien
             int result = int.Parse(b.Rows[0][0].ToString());
             if (result == 0)
             {
+                if (rbn_quanly.Checked == true)
+                    chucVuUser = rbn_quanly.Text;
+                else
+                    chucVuUser = rbn_thungan.Text;
                 this.Hide();
                 Form_Chinh form3 = new Form_Chinh();
                 form3.ShowDialog();

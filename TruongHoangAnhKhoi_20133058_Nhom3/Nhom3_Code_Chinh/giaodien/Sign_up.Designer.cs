@@ -54,9 +54,10 @@
             this.SingUp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SingUp_btn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SingUp_btn.ForeColor = System.Drawing.Color.Black;
-            this.SingUp_btn.Location = new System.Drawing.Point(94, 363);
+            this.SingUp_btn.Location = new System.Drawing.Point(125, 447);
+            this.SingUp_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SingUp_btn.Name = "SingUp_btn";
-            this.SingUp_btn.Size = new System.Drawing.Size(124, 29);
+            this.SingUp_btn.Size = new System.Drawing.Size(165, 36);
             this.SingUp_btn.TabIndex = 19;
             this.SingUp_btn.Text = "Sign Up";
             this.SingUp_btn.UseVisualStyleBackColor = false;
@@ -86,12 +87,13 @@
             this.Mkhau2_txt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mkhau2_txt.ForeColor = System.Drawing.Color.Silver;
             this.Mkhau2_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Mkhau2_txt.Location = new System.Drawing.Point(17, 256);
+            this.Mkhau2_txt.Location = new System.Drawing.Point(23, 315);
+            this.Mkhau2_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Mkhau2_txt.Name = "Mkhau2_txt";
             this.Mkhau2_txt.PasswordChar = '\0';
             this.Mkhau2_txt.PlaceholderText = "";
             this.Mkhau2_txt.SelectedText = "";
-            this.Mkhau2_txt.Size = new System.Drawing.Size(290, 33);
+            this.Mkhau2_txt.Size = new System.Drawing.Size(387, 41);
             this.Mkhau2_txt.TabIndex = 28;
             this.Mkhau2_txt.Enter += new System.EventHandler(this.Mkhau2_txt_Enter);
             this.Mkhau2_txt.Leave += new System.EventHandler(this.Mkhau2_txt_Leave);
@@ -102,10 +104,11 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.Location = new System.Drawing.Point(17, 48);
+            this.textBox2.Location = new System.Drawing.Point(23, 59);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(136, 14);
+            this.textBox2.Size = new System.Drawing.Size(181, 17);
             this.textBox2.TabIndex = 27;
             this.textBox2.Text = "It\'s quick and easy.";
             // 
@@ -123,12 +126,13 @@
             this.MKhau_txt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MKhau_txt.ForeColor = System.Drawing.Color.Silver;
             this.MKhau_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.MKhau_txt.Location = new System.Drawing.Point(17, 203);
+            this.MKhau_txt.Location = new System.Drawing.Point(23, 250);
+            this.MKhau_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MKhau_txt.Name = "MKhau_txt";
             this.MKhau_txt.PasswordChar = '\0';
             this.MKhau_txt.PlaceholderText = "";
             this.MKhau_txt.SelectedText = "";
-            this.MKhau_txt.Size = new System.Drawing.Size(290, 33);
+            this.MKhau_txt.Size = new System.Drawing.Size(387, 41);
             this.MKhau_txt.TabIndex = 26;
             this.MKhau_txt.Enter += new System.EventHandler(this.MKhau_txt_Enter);
             this.MKhau_txt.Leave += new System.EventHandler(this.MKhau_txt_Leave);
@@ -147,12 +151,13 @@
             this.MaQL_txt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaQL_txt.ForeColor = System.Drawing.Color.Silver;
             this.MaQL_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.MaQL_txt.Location = new System.Drawing.Point(17, 308);
+            this.MaQL_txt.Location = new System.Drawing.Point(23, 379);
+            this.MaQL_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaQL_txt.Name = "MaQL_txt";
             this.MaQL_txt.PasswordChar = '\0';
             this.MaQL_txt.PlaceholderText = "";
             this.MaQL_txt.SelectedText = "";
-            this.MaQL_txt.Size = new System.Drawing.Size(290, 33);
+            this.MaQL_txt.Size = new System.Drawing.Size(387, 41);
             this.MaQL_txt.TabIndex = 25;
             this.MaQL_txt.Enter += new System.EventHandler(this.MaQL_txt_Enter);
             this.MaQL_txt.Leave += new System.EventHandler(this.MaQL_txt_Leave);
@@ -171,12 +176,13 @@
             this.ĐNhap_txt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ĐNhap_txt.ForeColor = System.Drawing.Color.Silver;
             this.ĐNhap_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ĐNhap_txt.Location = new System.Drawing.Point(17, 152);
+            this.ĐNhap_txt.Location = new System.Drawing.Point(23, 187);
+            this.ĐNhap_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ĐNhap_txt.Name = "ĐNhap_txt";
             this.ĐNhap_txt.PasswordChar = '\0';
             this.ĐNhap_txt.PlaceholderText = "";
             this.ĐNhap_txt.SelectedText = "";
-            this.ĐNhap_txt.Size = new System.Drawing.Size(290, 33);
+            this.ĐNhap_txt.Size = new System.Drawing.Size(387, 41);
             this.ĐNhap_txt.TabIndex = 24;
             this.ĐNhap_txt.Enter += new System.EventHandler(this.ĐNhap_txt_Enter);
             this.ĐNhap_txt.Leave += new System.EventHandler(this.ĐNhap_txt_Leave);
@@ -192,15 +198,16 @@
             this.ChucVu_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ChucVu_txt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
             this.ChucVu_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChucVu_txt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChucVu_txt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.ChucVu_txt.ForeColor = System.Drawing.Color.Silver;
             this.ChucVu_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChucVu_txt.Location = new System.Drawing.Point(194, 96);
+            this.ChucVu_txt.Location = new System.Drawing.Point(259, 118);
+            this.ChucVu_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ChucVu_txt.Name = "ChucVu_txt";
             this.ChucVu_txt.PasswordChar = '\0';
             this.ChucVu_txt.PlaceholderText = "";
             this.ChucVu_txt.SelectedText = "";
-            this.ChucVu_txt.Size = new System.Drawing.Size(114, 33);
+            this.ChucVu_txt.Size = new System.Drawing.Size(152, 41);
             this.ChucVu_txt.TabIndex = 23;
             this.ChucVu_txt.Enter += new System.EventHandler(this.ChucVu_txt_Enter);
             this.ChucVu_txt.Leave += new System.EventHandler(this.ChucVu_txt_Leave);
@@ -219,12 +226,13 @@
             this.HoTen_txt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoTen_txt.ForeColor = System.Drawing.Color.Silver;
             this.HoTen_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.HoTen_txt.Location = new System.Drawing.Point(17, 96);
+            this.HoTen_txt.Location = new System.Drawing.Point(23, 118);
+            this.HoTen_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HoTen_txt.Name = "HoTen_txt";
             this.HoTen_txt.PasswordChar = '\0';
             this.HoTen_txt.PlaceholderText = "";
             this.HoTen_txt.SelectedText = "";
-            this.HoTen_txt.Size = new System.Drawing.Size(165, 33);
+            this.HoTen_txt.Size = new System.Drawing.Size(220, 41);
             this.HoTen_txt.TabIndex = 22;
             this.HoTen_txt.Enter += new System.EventHandler(this.HoTen_txt_Enter);
             this.HoTen_txt.Leave += new System.EventHandler(this.HoTen_txt_Leave);
@@ -235,10 +243,11 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.Location = new System.Drawing.Point(17, 11);
+            this.textBox1.Location = new System.Drawing.Point(23, 14);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(119, 31);
+            this.textBox1.Size = new System.Drawing.Size(159, 39);
             this.textBox1.TabIndex = 21;
             this.textBox1.Text = "Sign Up";
             // 
@@ -246,9 +255,10 @@
             // 
             this.panel1.BackgroundImage = global::giaodien.Properties.Resources.Presentation11;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(159, 11);
+            this.panel1.Location = new System.Drawing.Point(212, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(114, 63);
+            this.panel1.Size = new System.Drawing.Size(152, 78);
             this.panel1.TabIndex = 20;
             // 
             // label5
@@ -257,19 +267,20 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label5.Location = new System.Drawing.Point(279, 11);
+            this.label5.Location = new System.Drawing.Point(372, 14);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 24);
+            this.label5.Size = new System.Drawing.Size(31, 29);
             this.label5.TabIndex = 29;
             this.label5.Text = "X";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Sign_up
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(319, 411);
+            this.ClientSize = new System.Drawing.Size(425, 506);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SingUp_btn);
             this.Controls.Add(this.Mkhau2_txt);
@@ -283,8 +294,9 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Sign_up";
-            this.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.ResumeLayout(false);

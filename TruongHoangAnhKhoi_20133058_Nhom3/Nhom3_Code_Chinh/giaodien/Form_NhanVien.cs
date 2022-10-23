@@ -26,6 +26,13 @@ namespace giaodien
                 string query = "SELECT * FROM  XUAT_NV()";
                 DataTable table_nv = db.Execute(query);
                 data_nv.DataSource = table_nv;
+                string query1 = "SELECT * FROM  XUAT_CHUCVU()";
+                DataTable table_chuVu=db.Execute(query1);
+                cb_chucvu.DataSource = null;
+                cb_chucvu.Items.Clear();
+                cb_chucvu.DataSource = table_chuVu;
+                cb_chucvu.DisplayMember = "TenCV";
+                cb_chucvu.ValueMember = "MaCV";
             }
             catch (Exception ex)
             {
@@ -52,15 +59,6 @@ namespace giaodien
             //cb_nhom.DataSource = nhom;
             //cb_nhom.DisplayMember = "MaNhom";
             //cb_nhom.ValueMember = "MaNhom";
-        }
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -95,16 +93,36 @@ namespace giaodien
             int gTinh = 0;
             if (rdn_nu.Checked == false)
                 gTinh = 1;
-            SqlCommand cmd = new SqlCommand("DECLARE @result int EXECUTE THEM_NV '@nguoiid','@hoten','@diachi','@dienthoai',@ngaysinh,'@cccd',@gioitinnh,'@macv',@luong,@result output SELECT @result");
-            SqlParameter maNVParam = new SqlParameter("@nguoiid",txt_macv.Text);
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "EXECUTE THEM_NV @nguoiid,@hoten,@diachi,@dienthoai,@ngaysinh,@cccd,@gioitinnh,@macv,@luong,@result output";
+            SqlParameter maNVParam = new SqlParameter("@nguoiid",txt_manv.Text);
+            maNVParam.SqlDbType = SqlDbType.Char;
+            maNVParam.Size = 6;
             SqlParameter hoTenParam = new SqlParameter("@hoten", txt_tennv.Text);
+            hoTenParam.SqlDbType = SqlDbType.NVarChar;
+            hoTenParam.Size = 30;
             SqlParameter diaChiParam = new SqlParameter("@diachi", txt_dchinv.Text);
+            diaChiParam.SqlDbType = SqlDbType.NVarChar;
+            diaChiParam.Size = 30;
             SqlParameter sdtParam = new SqlParameter("@dienthoai", txt_sdtnv.Text);
-            SqlParameter ngaySinhParam = new SqlParameter("@ngaysinh", date_ngaysinh.Text);
+            sdtParam.SqlDbType = SqlDbType.Char;
+            sdtParam.Size = 11;
+            string ngaySinh = date_ngaysinh.Value.ToString("yyyy-MM-dd");
+            SqlParameter ngaySinhParam = new SqlParameter("@ngaysinh", ngaySinh);
+            ngaySinhParam.SqlDbType = SqlDbType.Date;
             SqlParameter cccdParam = new SqlParameter("@cccd", txt_cccdnv.Text);
-            SqlParameter gTinhParam = new SqlParameter("@gioitinnh", gTinh.ToString());
-            SqlParameter maChucVuParam = new SqlParameter("@macv", txt_macv.Text);
+            cccdParam.SqlDbType = SqlDbType.Char;
+            cccdParam.Size = 11;
+            SqlParameter gTinhParam = new SqlParameter("@gioitinnh", gTinh);
+            gTinhParam.SqlDbType = SqlDbType.Bit;
+            SqlParameter maChucVuParam = new SqlParameter("@macv", cb_chucvu.SelectedValue.ToString());
+            maChucVuParam.SqlDbType = SqlDbType.Char;
+            maChucVuParam.Size = 6;
             SqlParameter luongParam = new SqlParameter("@luong", txt_luong.Text);
+            luongParam.SqlDbType = SqlDbType.Decimal;
+            SqlParameter resultParam = new SqlParameter("@result", 0);
+            resultParam.SqlDbType = SqlDbType.Int;
+            resultParam.Direction = ParameterDirection.Output;
             cmd.Parameters.Add(luongParam);
             cmd.Parameters.Add(maChucVuParam);
             cmd.Parameters.Add(maNVParam);
@@ -114,17 +132,19 @@ namespace giaodien
             cmd.Parameters.Add(ngaySinhParam);
             cmd.Parameters.Add(cccdParam);
             cmd.Parameters.Add(gTinhParam);
+            cmd.Parameters.Add(resultParam);
             // int result = int.Parse(db.ExecuteCMD(cmd).Rows[0][0].ToString());
-            string query= "DECLARE @result as int EXECUTE THEM_NV '" + txt_manv.Text+"','"+txt_tennv.Text+"','"+txt_dchinv.Text+"','"+txt_sdtnv.Text+"','"+date_ngaysinh.Text+"','"
+            db.ExecuteCMD(cmd);
+            int result = (int)cmd.Parameters["@result"].Value;
+            /*string query= "DECLARE @result as int EXECUTE THEM_NV '" + txt_manv.Text+"','"+txt_tennv.Text+"','"+txt_dchinv.Text+"','"+txt_sdtnv.Text+"','"+date_ngaysinh.Text+"','"
                                                 +txt_cccdnv.Text+"',"+gTinh.ToString()+",'"+txt_macv.Text+"',"+txt_luong.Text+",@result output SELECT @result";
             db.Execute(query);
             DataTable d = db.Execute(query);
-            int result = int.Parse(db.Execute(query).Rows[0][0].ToString());
+            int result = int.Parse(db.Execute(query).Rows[0][0].ToString());*/
             if (result==0)
                 MessageBox.Show("Thêm không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
-            txt_manv.Text = result.ToString();
             Form_NhanVien_Load(sender,e);
             /*string ms = txt_matho.Text;
             string ten = txt_tentho.Text;
@@ -341,7 +361,7 @@ namespace giaodien
 
         private void data_nv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*try
+            try
             {
                 if (data_nv.Rows.Count != 1)
                 {
@@ -349,21 +369,27 @@ namespace giaodien
                     row = data_nv.Rows[e.RowIndex];
                     if (row != data_nv.Rows[data_nv.Rows.Count-1] && row!=null)
                     {
-                        txt_matho.Text = row.Cells[0].Value.ToString();
-                        txt_tentho.Text = row.Cells[1].Value.ToString();
-                        cb_nhom.Text = row.Cells[2].Value.ToString();
-                        if (row.Cells[0].Value.ToString() == row.Cells[3].Value.ToString())
-                            rd_truong.Checked = true;
+                        txt_manv.Text = row.Cells[0].Value.ToString();
+                        txt_tennv.Text = row.Cells[1].Value.ToString();
+                        txt_dchinv.Text = row.Cells[2].Value.ToString();
+                        txt_sdtnv.Text = row.Cells[3].Value.ToString();
+                        string[] arrListStr = row.Cells[4].Value.ToString().Split('/');
+                        arrListStr[2]= arrListStr[2].Substring(0,4);
+                        date_ngaysinh.Value = new DateTime(int.Parse(arrListStr[2]),int.Parse(arrListStr[1]),int.Parse(arrListStr[0]));
+                        txt_cccdnv.Text = row.Cells[5].Value.ToString();
+                        if (row.Cells[6].Value.ToString() == "False")
+                            rdn_nu.Checked = true;
                         else
-                            rd_tvien.Checked = true;
-                        txt_luong.Text = row.Cells[4].Value.ToString();
+                            rbn_nam.Checked = true;
+                        cb_chucvu.Text = row.Cells[7].Value.ToString();
+                        txt_luong.Text = row.Cells[8].Value.ToString();
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
+            }
         }
 
         private void txt_luong_Leave(object sender, EventArgs e)
